@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'google' => [
+        'client_id' => env('SUPABASE_CLIENT_ID'),
+        'client_secret' => env('SUPABASE_CLIENT_SECRET'),
+        'redirect' => env('SUPABASE_CLIENT_CALLBACK_URL',),
+    ],
+
 ];
