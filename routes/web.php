@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+// ===============================================================================================================
 
 
 
@@ -27,6 +28,10 @@ Route::get('/company', function () {
         'title' => 'Company Page'
     ]);
 });
+Route::get('/nav', function () {
+    return Inertia::render('Nav');
+});
+
 
 
 
@@ -38,3 +43,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+// ===============================================================================================================
