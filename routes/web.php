@@ -21,15 +21,20 @@ Route::get('/dashboard', function () {
 Route::get('/about', function () {
     return Inertia::render('About/About');
 });
+// ===============================================================================================================
 
 
 
 // ====== My Routes ======
 Route::get('/company', function () {
-    return Inertia::render('Company',[
+    return Inertia::render('Company', [
         'title' => 'Company Page'
     ]);
 });
+Route::get('/nav', function () {
+    return Inertia::render('Nav');
+});
+
 
 
 
@@ -40,4 +45,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+// ===============================================================================================================

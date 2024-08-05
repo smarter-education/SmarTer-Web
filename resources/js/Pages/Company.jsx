@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Head } from "@inertiajs/react";
 import Footer from "../Layouts/Footer.jsx";
 import Header from "../Layouts/Header.jsx";
+// import Dotline from "../Components/Dotline.jsx"; 
 
 import Raihan from "../assets/image/team/raihan.png";
 import Guntur from "../assets/image/team/guntur.png";
