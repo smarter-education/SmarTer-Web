@@ -1,9 +1,11 @@
 import React from "react";
 import { Link, Head } from "@inertiajs/react";
-import Footer from "../Layouts/Footer.jsx";
-import Header from "../Layouts/Header.jsx";
-// import Dotline from "../Components/Dotline.jsx"; 
+// Layout
+import Dotline from "@/Components/Dotline";
+import Header from "@/Layouts/Header";
+import Footer from "@/Layouts/Footer";
 
+// Image
 import Raihan from "../assets/image/team/raihan.png";
 import Guntur from "../assets/image/team/guntur.png";
 import Rayina from "../assets/image/team/rayina.png";
@@ -135,27 +137,7 @@ const Company = (props) => {
                 </svg>
             </header>
             <main className="bg-white relative ">
-                <div class="flex justify-center bg-white">
-                    <svg
-                        width=""
-                        height="7"
-                        viewBox="0 0 1916 7"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                    >
-                        <line
-                            x1="2.00313"
-                            y1="2.00313"
-                            x2="1914"
-                            y2="4.99687"
-                            stroke="#5F2D47"
-                            stroke-width="4"
-                            stroke-linecap="round"
-                            stroke-dasharray="30 30"
-                        ></line>
-                    </svg>
-                </div>
+                <Dotline />
                 <div class="bg-white">
                     <div className="text-center h-20 my-10">
                         <h4 className="font-medium text-[40px] leading-[80px] bg-gradient-to-r from-[#5F2D47] to-[#6A5898] bg-clip-text text-transparent">
