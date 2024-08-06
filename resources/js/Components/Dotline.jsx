@@ -28,4 +28,4 @@ const Dotline = () => {
     );
 };
 
-export default Dotlinece;
+export default Dotline;
