@@ -18,11 +18,11 @@ const Company = (props) => {
         <>
             <Head title={props.title} />
             <header className="relative">
-                <div className="bg-[#f6f8fb]">
+                <div className="bg-smarter1">
                     <Header />
                     <div className="flex justify-center  py-10 ">
                         <div className="bg-white w-[85%] h-40 flex flex-col justify-center items-center">
-                            <h4 className="bg-gradient-to-b from-[#6A5898] to-[#5F2D47] bg-clip-text text-transparent text-3xl font-semibold">
+                            <h4 className="bg-gradient-to-b from-smarter5 to-smarter7 bg-clip-text text-transparent text-3xl font-semibold">
                                 “Achieve your dreams and reach your goals”
                             </h4>
                             <p className="text-black">SmarTer Motto</p>
@@ -30,10 +30,10 @@ const Company = (props) => {
                     </div>
                     <div className="flex justify-evenly content-center pb-10">
                         <div className="w-[400px] h-50">
-                            <h5 className="bg-gradient-to-b from-[#6A5898] to-[#5F2D47] bg-clip-text text-transparent text-4xl font-semibold">
+                            <h5 className="bg-gradient-to-b from-smarter5 to-smarter7 bg-clip-text text-transparent text-4xl font-semibold">
                                 Visi
                             </h5>
-                            <div class=" w-[400px]  border-2 border-[#5F2D47]"></div>
+                            <div class=" w-[400px]  border-2 border-smarter7"></div>
                             <p className="text-black font-light text-[15px] mt-2">
                                 Menjadi Platform pendidikan terpercaya dalam
                                 menyediakan pendidikan berkualitas yang
@@ -43,10 +43,10 @@ const Company = (props) => {
                             </p>
                         </div>
                         <div className="w-[400px] h-50">
-                            <h5 className="bg-gradient-to-b from-[#6A5898] to-[#5F2D47] bg-clip-text text-transparent text-4xl font-semibold">
+                            <h5 className="bg-gradient-to-b from-smarter5 to-smarter7 bg-clip-text text-transparent text-4xl font-semibold">
                                 Misi
                             </h5>
-                            <div class=" w-[400px]  border-2 border-[#5F2D47]"></div>
+                            <div class=" w-[400px]  border-2 border-smarter7"></div>
                             <p className="text-black font-light text-[15px] mt-2">
                                 SmarTer menghadirkan solusi pendidikan inovatif
                                 dan terjangkau melalui teknologi informasi,
@@ -57,90 +57,91 @@ const Company = (props) => {
                         </div>
                     </div>
                 </div>
-                {/* SVG */}
-                <svg
-                    viewBox="0 0 71 218"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="absolute top-[400px] w-[40px] left-0"
-                >
-                    <ellipse
-                        cy="186.5"
-                        rx="30"
-                        ry="31.5"
-                        transform="rotate(-180 0 186.5)"
-                        fill="url(#paint0_linear_331_541)"
-                    />
-                    <ellipse
-                        cx="-12"
-                        cy="86.5"
-                        rx="83"
-                        ry="86.5"
-                        transform="rotate(-180 -12 86.5)"
-                        fill="url(#paint1_linear_331_541)"
-                    />
-                    <defs>
-                        <linearGradient
-                            id="paint0_linear_331_541"
-                            x1="0"
-                            y1="155"
-                            x2="0"
-                            y2="218"
-                            gradientUnits="userSpaceOnUse"
-                        >
-                            <stop stop-color="#765878" />
-                            <stop offset="0.5" stop-color="#A87DAB" />
-                            <stop offset="1" stop-color="#DAA3DE" />
-                        </linearGradient>
-                        <linearGradient
-                            id="paint1_linear_331_541"
-                            x1="-33.5896"
-                            y1="15.5"
-                            x2="-10.1811"
-                            y2="172.729"
-                            gradientUnits="userSpaceOnUse"
-                        >
-                            <stop stop-color="#F2DFE8" />
-                            <stop offset="0.5" stop-color="#8074A1" />
-                            <stop offset="1" stop-color="#5F2D47" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <svg
-                    viewBox="0 0 60 63"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="absolute w-[20px] right-[90px] top-[400px] "
-                >
-                    <ellipse
-                        cx="30"
-                        cy="31.5"
-                        rx="30"
-                        ry="31.5"
-                        transform="rotate(-180 30 31.5)"
-                        fill="url(#paint0_linear_62_1918)"
-                    />
-                    <defs>
-                        <linearGradient
-                            id="paint0_linear_62_1918"
-                            x1="30"
-                            y1="0"
-                            x2="30"
-                            y2="63"
-                            gradientUnits="userSpaceOnUse"
-                        >
-                            <stop stop-color="#765878" />
-                            <stop offset="0.5" stop-color="#A87DAB" />
-                            <stop offset="1" stop-color="#DAA3DE" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+                <div>
+                    <svg
+                        viewBox="0 0 71 218"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="absolute top-[400px] w-[40px] left-0"
+                    >
+                        <ellipse
+                            cy="186.5"
+                            rx="30"
+                            ry="31.5"
+                            transform="rotate(-180 0 186.5)"
+                            fill="url(#paint0_linear_331_541)"
+                        />
+                        <ellipse
+                            cx="-12"
+                            cy="86.5"
+                            rx="83"
+                            ry="86.5"
+                            transform="rotate(-180 -12 86.5)"
+                            fill="url(#paint1_linear_331_541)"
+                        />
+                        <defs>
+                            <linearGradient
+                                id="paint0_linear_331_541"
+                                x1="0"
+                                y1="155"
+                                x2="0"
+                                y2="218"
+                                gradientUnits="userSpaceOnUse"
+                            >
+                                <stop stop-color="#765878" />
+                                <stop offset="0.5" stop-color="#A87DAB" />
+                                <stop offset="1" stop-color="#DAA3DE" />
+                            </linearGradient>
+                            <linearGradient
+                                id="paint1_linear_331_541"
+                                x1="-33.5896"
+                                y1="15.5"
+                                x2="-10.1811"
+                                y2="172.729"
+                                gradientUnits="userSpaceOnUse"
+                            >
+                                <stop stop-color="#F2DFE8" />
+                                <stop offset="0.5" stop-color="#8074A1" />
+                                <stop offset="1" stop-color="#5F2D47" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <svg
+                        viewBox="0 0 60 63"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="absolute w-[20px] right-[90px] top-[400px] "
+                    >
+                        <ellipse
+                            cx="30"
+                            cy="31.5"
+                            rx="30"
+                            ry="31.5"
+                            transform="rotate(-180 30 31.5)"
+                            fill="url(#paint0_linear_62_1918)"
+                        />
+                        <defs>
+                            <linearGradient
+                                id="paint0_linear_62_1918"
+                                x1="30"
+                                y1="0"
+                                x2="30"
+                                y2="63"
+                                gradientUnits="userSpaceOnUse"
+                            >
+                                <stop stop-color="#765878" />
+                                <stop offset="0.5" stop-color="#A87DAB" />
+                                <stop offset="1" stop-color="#DAA3DE" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
             </header>
             <main className="bg-white relative ">
                 <Dotline />
                 <div class="bg-white">
                     <div className="text-center h-20 my-10">
-                        <h4 className="font-medium text-[40px] leading-[80px] bg-gradient-to-r from-[#5F2D47] to-[#6A5898] bg-clip-text text-transparent">
+                        <h4 className="font-medium text-[40px] leading-[80px] bg-gradient-to-r from-smarter7 to-smarter5 bg-clip-text text-transparent">
                             Team
                         </h4>
                     </div>

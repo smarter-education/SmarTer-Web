@@ -29,7 +29,7 @@ Route::get('/company', function () {
     ]);
 });Route::get('/', function () {
     return Inertia::render('Homepage',[
-        'title' => 'Company Page'
+        'title' => 'Home Page'
     ]);
 });
 
