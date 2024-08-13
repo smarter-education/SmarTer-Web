@@ -36,7 +36,16 @@ Route::get('/', function () {
         'title' => 'Home Page'
     ]);
 });
-
+Route::get('/company', function () {
+    return Inertia::render('Company', [
+        'title' => 'Company Page'
+    ]);
+});
+Route::get('/dash', function () {
+    return Inertia::render('Dash', [
+        'title' => 'Dashboard'
+    ]);
+});
 
 
 

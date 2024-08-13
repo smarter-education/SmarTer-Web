@@ -1,8 +1,13 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 
+
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
 import flowbite from "flowbite-react/tailwind";
+=======
+const flowbite = require("flowbite-react/tailwind");
+>>>>>>> 1df6a75 (test carousel)
 export default {
     content: [
 <<<<<<< HEAD
@@ -17,7 +22,11 @@ export default {
         "./resources/views/**/*.blade.php",
         "./resources/js/**/*.jsx",
         "node_modules/flowbite-react/lib/esm/**/*.js",
+<<<<<<< HEAD
 >>>>>>> 09bcb87 (homepage 80%)
+=======
+        flowbite.content(),
+>>>>>>> 1df6a75 (test carousel)
     ],
 
     theme: {
@@ -42,6 +51,7 @@ export default {
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     plugins: [
         forms,
         require('flowbite/plugin'),
@@ -51,4 +61,12 @@ export default {
 =======
     plugins: [forms, require("flowbite/plugin"), require("daisyui")],
 >>>>>>> 09bcb87 (homepage 80%)
+=======
+    plugins: [
+        forms,
+        require("flowbite/plugin"),
+        require("daisyui"),
+        flowbite.plugin(),
+    ],
+>>>>>>> 1df6a75 (test carousel)
 };

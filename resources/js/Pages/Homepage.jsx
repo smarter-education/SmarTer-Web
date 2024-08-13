@@ -13,6 +13,7 @@ import vb from "../assets/image/background/vb.png";
 import circle2 from "../assets/image/background/circle-2.png";
 import circle from "../assets/image/background/circle.png";
 import circlebot from "../assets/image/background/circle-bot.png";
+import { Carousel } from "flowbite-react";
 const Homepage = () => {
     return (
         <>
@@ -66,6 +67,31 @@ const Homepage = () => {
                         </p>
                     </div>
                     {/* carousel */}
+                    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+                        <Carousel slideInterval={5000}>
+                            <img
+                                src={bg1}
+                                alt="..."
+                            />
+                            <img
+                                src={bg2}
+                                alt="..."
+                            />
+                            <img
+                                src={circle}
+                                alt="..."
+                            />
+                            <img
+                                src={circle2}
+                                alt="..."
+                            />
+                            <img
+                                src={circlebot}
+                                alt="..."
+                            />
+                        </Carousel>
+                    </div>
+
                 </div>
                 <div className="bg-white h-screen"></div>
             </section>
@@ -460,7 +486,10 @@ const Homepage = () => {
                             fill="#643652"
                         />
                     </svg>
-                    <img src={circlebot} className="absolute right-0 bottom-[270px] w-[200px]" />
+                    <img
+                        src={circlebot}
+                        className="absolute right-0 bottom-[270px] w-[200px]"
+                    />
                 </div>
                 <div className="pt-[100px]">
                     <Footer />
