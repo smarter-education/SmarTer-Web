@@ -8,7 +8,7 @@ import Sponsor from "../assets/image/others/sponsor.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-r from-[#592c45] to-[#6a5898] h-full ">
+        <footer className="bg-gradient-to-r from-smarter7 to-smarter4 h-full ">
             <div className="p-10 px-16 flex ">
                 <div className="flex  flex-col lg:flex-row">
                     <div className="flex justify-start flex-col mr-[300px]">
