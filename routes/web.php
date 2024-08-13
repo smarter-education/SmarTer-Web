@@ -22,17 +22,22 @@ Route::get('/dashboard', function () {
 
 
 
-// ====== My Routes ======
-Route::get('/company', function () {
-    return Inertia::render('Company',[
-        'title' => 'Company Page'
-    ]);
-});Route::get('/', function () {
+// *====== My Routes ======
+Route::get('/', function () {
     return Inertia::render('Homepage',[
         'title' => 'Home Page'
     ]);
 });
-
+Route::get('/company', function () {
+    return Inertia::render('Company',[
+        'title' => 'Company Page'
+    ]);
+});
+Route::get('/dash', function () {
+    return Inertia::render('Dash',[
+        'title' => 'Dashboard'
+    ]);
+});
 
 
 

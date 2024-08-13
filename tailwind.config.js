@@ -1,7 +1,9 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 
+
 /** @type {import('tailwindcss').Config} */
+const flowbite = require("flowbite-react/tailwind");
 export default {
     content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
@@ -9,6 +11,7 @@ export default {
         "./resources/views/**/*.blade.php",
         "./resources/js/**/*.jsx",
         "node_modules/flowbite-react/lib/esm/**/*.js",
+        flowbite.content(),
     ],
 
     theme: {
@@ -32,5 +35,10 @@ export default {
         },
     },
 
-    plugins: [forms, require("flowbite/plugin"), require("daisyui")],
+    plugins: [
+        forms,
+        require("flowbite/plugin"),
+        require("daisyui"),
+        flowbite.plugin(),
+    ],
 };
