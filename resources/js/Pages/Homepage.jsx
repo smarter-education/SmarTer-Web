@@ -14,11 +14,74 @@ import circle2 from "../assets/image/background/circle-2.png";
 import circle from "../assets/image/background/circle.png";
 import circlebot from "../assets/image/background/circle-bot.png";
 import { Carousel } from "flowbite-react";
+import banner1 from "../assets/image/banner/banner1.png";
+import banner2 from "../assets/image/banner/banner2.png";
+import banner3 from "../assets/image/banner/banner3.png";
+import lamp from "../assets/image/others/lamp.png";
+import Paket from "@/Components/Paket";
 const Homepage = () => {
     return (
         <>
             {/* ===== Hero Section ===== */}
             <section className="bg-[#FBF3FF] h-screen relative">
+                <nav className="bg-transparent">
+                    <div className="container mx-auto flex items-center justify-between bg-transparent absolute">
+                        {/* Logo */}
+                        <div className="flex items-center space-x-2  mx-6">
+                            <img
+                                src={lamp}
+                                alt="SmarTer Logo"
+                                className="h-8 w-8"
+                            />
+                            <span className="text-xl font-bold text-smarter5">
+                                SmarTer
+                            </span>
+                        </div>
+
+                        {/* Search Bar */}
+                        <div className="flex-1 mx-6">
+                            <input
+                                type="text"
+                                placeholder="Cari kursus pembelajaran"
+                                className="w-full px-4 py-2 text-sm text-gray-900  border border-gray-300 rounded-full focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                            />
+                        </div>
+
+                        {/* Navigation Links */}
+                        <div className="hidden md:flex space-x-12 bg-transparent ">
+                            <a
+                                href="#"
+                                className="text-black w hover:text-purple-900"
+                            >
+                                Home
+                            </a>
+                            <a
+                                href="#"
+                                className="text-black w hover:text-purple-900"
+                            >
+                                Product
+                            </a>
+                            <a
+                                href="#"
+                                className="text-black w hover:text-purple-900"
+                            >
+                                Learning Path
+                            </a>
+                            <a
+                                href="#"
+                                className="text-black w hover:text-purple-900"
+                            >
+                                About Us
+                            </a>
+                        </div>
+
+                        <div>
+                            <button className=" mx-6 py-1 w-40 text-sm font-semibold text-purple-700 bg-white border border-purple-700 rounded-full hover:bg-purple-100">
+                                Log in
+                            </button>
+                        </div>
+                    </div>
+                </nav>
                 {/* ===== Background =====*/}
                 <div className="flex justify-between h-screen ">
                     <div className="flex items-end ">
@@ -50,50 +113,47 @@ const Homepage = () => {
                     <Homesvg />
                 </div>
             </section>
-            {/* ===== program Sction ===== */}
-            <section className="bg-smarter1 h-screen">
-                <div className="pt-10">
+            {/* ===== Program Section ===== */}
+            <section className="bg-smarter1 h-screen py-5">
+                <div className="mb-10">
                     <Dotline />
                 </div>
-                <div className="flex mt-10">
-                    <div className="ml-20">
-                        <h4 className="text-[25px] font-medium text-smarter6 p-b2">
-                            Program terbaru kami
-                        </h4>
-                        <p className="text-[14px] text-smarter5 font-medium w-[230px]">
-                            Program terbaru kami Bekerja sama dengan partner,
-                            kami menyelenggarakan beberapa program untuk
-                            mendukung anak muda di Indonesia.
-                        </p>
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-start justify-between">
+                        <div className="md:w-1/3 mb-6 md:mb-0">
+                            <h4 className="text-2xl font-medium text-smarter6 mb-2">
+                                Program terbaru kami
+                            </h4>
+                            <p className="text-sm text-smarter5 font-medium max-w-xs">
+                                Program terbaru kami Bekerja sama dengan
+                                partner, kami menyelenggarakan beberapa program
+                                untuk mendukung anak muda di Indonesia.
+                            </p>
+                        </div>
+                        <div className="md:w-9/12 ">
+                            <div className="relative">
+                                <Carousel
+                                    slideInterval={2000}
+                                    className="rounded-lg overflow-hidden h-52"
+                                >
+                                    <img src={banner1} alt="..." />
+                                    <img src={banner2} alt="..." />
+                                    <img src={banner3} alt="..." />
+                                </Carousel>
+                            </div>
+                        </div>
                     </div>
-                    {/* carousel */}
-                    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-                        <Carousel slideInterval={5000}>
-                            <img
-                                src={bg1}
-                                alt="..."
-                            />
-                            <img
-                                src={bg2}
-                                alt="..."
-                            />
-                            <img
-                                src={circle}
-                                alt="..."
-                            />
-                            <img
-                                src={circle2}
-                                alt="..."
-                            />
-                            <img
-                                src={circlebot}
-                                alt="..."
-                            />
-                        </Carousel>
-                    </div>
-
                 </div>
-                <div className="bg-white h-screen"></div>
+                <div className="bg-white mt-5">
+                    <div className="mb-10">
+                        <h2 className="text-smarter5 font-semibold text-3xl ml-20 pt-6">
+                            Paket Populer
+                        </h2>
+                        <div className="">
+                            <Paket />
+                        </div>
+                    </div>
+                </div>
             </section>
             {/* ===== Course Section ===== */}
             <section className="bg-smarter1 relative">
