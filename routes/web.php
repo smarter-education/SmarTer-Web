@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+// ===============================================================================================================
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -17,7 +18,30 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+// ===============================================================================================================
 
+
+
+// *====== My Routes ======
+Route::get('/', function () {
+    return Inertia::render('Homepage',[
+        'title' => 'Home Page'
+    ]);
+});
+Route::get('/company', function () {
+    return Inertia::render('Company',[
+        'title' => 'Company Page'
+    ]);
+});
+Route::get('/dash', function () {
+    return Inertia::render('Dash',[
+        'title' => 'Dashboard'
+    ]);
+});
+
+
+
+// ===============================================================================================================
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -25,3 +49,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+// ===============================================================================================================
