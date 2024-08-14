@@ -20,6 +20,10 @@ export default function Login({ status, canResetPassword }) {
             onFinish: () => reset('password'),
         });
     };
+    const GoogleSubmit = async () => {
+        window.location.href = '/auth/redirect';
+
+    }
 
     return (
         <GuestLayout>
@@ -87,6 +91,8 @@ export default function Login({ status, canResetPassword }) {
                     </PrimaryButton>
                 </div>
             </form>
+            <button className="btn" onClick={GoogleSubmit}>Login With Google</button>
+
         </GuestLayout>
     );
 }
