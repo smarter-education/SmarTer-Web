@@ -25,12 +25,7 @@ Route::get('/about', function () {
 
 
 
-// ====== My Routes ======
-Route::get('/company', function () {
-    return Inertia::render('Company', [
-        'title' => 'Company Page'
-    ]);
-});
+// *====== My Routes ======
 Route::get('/', function () {
     return Inertia::render('Homepage', [
         'title' => 'Home Page'

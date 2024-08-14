@@ -4,8 +4,11 @@ import forms from "@tailwindcss/forms";
 
 /** @type {import('tailwindcss').Config} */
 <<<<<<< HEAD
+<<<<<<< HEAD
 import flowbite from "flowbite-react/tailwind";
 =======
+=======
+>>>>>>> bbd66ed (benerin oauth google)
 const flowbite = require("flowbite-react/tailwind");
 >>>>>>> 1df6a75 (test carousel)
 export default {
@@ -23,8 +26,20 @@ export default {
         "./resources/js/**/*.jsx",
         "node_modules/flowbite-react/lib/esm/**/*.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 09bcb87 (homepage 80%)
 =======
+=======
+=======
+import flowbite from "flowbite-react/tailwind";
+export default {
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.jsx',
+>>>>>>> f5dda85 (benerin oauth google)
+>>>>>>> bbd66ed (benerin oauth google)
         flowbite.content(),
 >>>>>>> 1df6a75 (test carousel)
     ],
@@ -64,8 +79,13 @@ export default {
 =======
     plugins: [
         forms,
+<<<<<<< HEAD
         require("flowbite/plugin"),
         require("daisyui"),
+=======
+        require('flowbite/plugin'),
+        require('daisyui'),
+>>>>>>> f5dda85 (benerin oauth google)
         flowbite.plugin(),
     ],
 >>>>>>> 1df6a75 (test carousel)
