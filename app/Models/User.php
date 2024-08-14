@@ -11,13 +11,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-        /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table = 'users-google';
-
     /**
      * The attributes that are mass assignable.
      *
@@ -27,9 +20,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'google_id',
-        'google_token',
-        'google_refresh_token',
     ];
 
     /**
