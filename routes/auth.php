@@ -62,4 +62,4 @@ Route::middleware('auth')->group(function () {
 Route::get('/auth/redirect', [OauthControllers::class, 'redirectOauth']);
 Route::get('/auth/google/callback', [OauthControllers::class, 'callbackOauth']);
 
-require __DIR__.'/s3Bucket.php';
+require __DIR__.'/s3bucket.php';

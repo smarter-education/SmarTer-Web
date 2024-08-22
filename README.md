@@ -1,3 +1,7 @@
+
+## [Download .ENV disini](https://files.riqgarden.pp.ua/share/V4mBvy_-)
+## [Merge Checkpoint 15-08-24](https://github.com/smarter-education/merge-15-08-24)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
