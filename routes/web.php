@@ -23,6 +23,19 @@ Route::get('/about', function () {
 });
 // ===============================================================================================================
 
+// Auth
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('/login', function () {
+        return Inertia::render('Auth/Login');
+    });
+    Route::get('/register', function () {
+        return Inertia::render('Auth/Register');
+    });
+    Route::get('/confirm-password', function () {
+        return Inertia::render('Auth/ConfirmPassword');
+    });
+    // You can add more routes here if needed
+});
 
 
 // *====== My Routes ======
