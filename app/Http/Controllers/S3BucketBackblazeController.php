@@ -40,28 +40,18 @@ class S3BucketBackblazeController extends Controller
 
     public function downloadFile(Request $request)
     {
-        $fileName = $request->name;
+        $file = $request->input('file');  // Menggunakan input, bukan file
 
-        if ($fileContent = Storage::disk('backblaze')->get($fileName)) {
+        if (Storage::disk('backblaze')->exists($file)) {  // Memeriksa apakah file ada
+            $fileContent = Storage::disk('backblaze')->get($file);
+
             return response()->streamDownload(function () use ($fileContent) {
                 echo $fileContent;
-            }, $fileName);
+            }, basename($file));  // Nama file sebagai nama default untuk download
         }
 
         return response()->json(['message' => 'File not found'], 404);
     }
-
-    public function createFolder(Request $request)
-    {
-        $folderName = $request->name;
-
-        if (Storage::disk('backblaze')->makeDirectory($folderName)) {
-            return response()->json(['message' => 'Folder created successfully'], 201);
-        }
-
-        return response()->json(['message' => 'Failed to create folder'], 500);
-    }
-
     public function deleteFolder(Request $request)
     {
         $folderName = $request->name;
