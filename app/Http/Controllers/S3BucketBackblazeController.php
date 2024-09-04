@@ -106,42 +106,4 @@ class S3BucketBackblazeController extends Controller
 
         return response()->json(['path' => $path], 201);
     }
-
-    public function deleteFolderContent(Request $request)
-    {
-        $folderName = $request->name;
-        $files = Storage::disk('backblaze')->files($folderName);
-
-        foreach ($files as $file) {
-            Storage::disk('backblaze')->delete($file);
-        }
-
-        return response()->json(['message' => 'Folder content deleted successfully'], 200);
-    }
-
-    public function downloadFolderContent(Request $request)
-    {
-        $folderName = $request->name;
-        $files = Storage::disk('backblaze')->files($folderName);
-
-        if (empty($files)) {
-            return response()->json(['message' => 'Folder is empty'], 404);
-        }
-
-        $zip = new \ZipArchive();
-        $zipName = $folderName . '.zip';
-        $zipPath = storage_path('app/' . $zipName);
-
-        if ($zip->open($zipPath, \ZipArchive::CREATE) !== true) {
-            return response()->json(['message' => 'Failed to create zip file'], 500);
-        }
-
-        foreach ($files as $file) {
-            $zip->addFromString(basename($file), Storage::disk('backblaze')->get($file));
-        }
-
-        $zip->close();
-
-        return response()->download($zipPath)->deleteFileAfterSend(true);
-    }
 }
