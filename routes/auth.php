@@ -64,5 +64,7 @@ Route::post('/logout', [ProfileController::class, 'destroy'])->name('logout');
 
 Route::get('/auth/redirect', [OauthControllers::class, 'redirectOauth']);
 Route::get('/auth/google/callback', [OauthControllers::class, 'callbackOauth']);
+Route::post('/auth/logoutGoogle', [OauthControllers::class, 'logout'])->middleware('jwt.auth')->name('logoutGoogle');
+
 
 require __DIR__.'/s3Bucket.php';
