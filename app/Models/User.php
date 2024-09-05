@@ -52,7 +52,15 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+    public function subscriptions()
+    {
+        return $this->hasMany(Subscription::class);
+    }
 
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
 
     /**
      * Get the attributes that should be cast.
