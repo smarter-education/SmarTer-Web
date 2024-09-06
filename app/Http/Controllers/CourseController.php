@@ -50,6 +50,58 @@ class CourseController extends Controller
         }
     }
 
+    public function updateCourses(Request $request, $id) {
+        try {
+            // Validasi input
+            $request->validate([
+                'title' => 'sometimes|string|max:255',
+                'description' => 'sometimes|string',
+                'content_course' => 'sometimes|file|mimes:pdf',
+                'is_paid' => 'sometimes|boolean',
+            ]);
+
+            // Temukan course yang akan diperbarui
+            $course = Courses::find($id);
+
+            if (!$course) {
+                return response()->json(['message' => 'Course not found'], 404);
+            }
+
+            // Perbarui data course dengan nilai yang ada di request
+            if ($request->has('title')) {
+                $course->title = $request->input('title');
+            }
+            if ($request->has('description')) {
+                $course->description = $request->input('description');
+            }
+            if ($request->has('is_paid')) {
+                $course->is_paid = $request->input('is_paid');
+            }
+
+            // Handle file upload jika ada file baru
+            if ($request->hasFile('content_course')) {
+                // Hapus file lama jika ada
+                if ($course->content_course) {
+                    Storage::disk('backblaze')->delete($course->content_course);
+                }
+
+                // Upload file baru ke Backblaze
+                $file = $request->file('content_course');
+                $path = Storage::disk('backblaze')->putFile('/files/smarter', $file);
+
+                // Update path file
+                $course->content_course = $path;
+            }
+
+            $course->save();
+
+            return response()->json($course, 200);
+        } catch (\Throwable $th) {
+            return response()->json(['message' => 'Failed to update course'], 500);
+        }
+    }
+
+
     public function deleteCourse($id) {
         $course = Courses::find($id);
 
