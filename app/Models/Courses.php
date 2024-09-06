@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Courses extends Model
 {
-    protected $fillable = ['title', 'description', 'category', 'type', 'file_path', 'is_paid'];
+    protected $fillable = ['title', 'description', 'content_course', 'is_paid'];
 
-    public function subscriptions() {
+    public function subscriptions()
+    {
         return $this->hasMany(Subscription::class);
     }
+
 }
