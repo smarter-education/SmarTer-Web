@@ -11,3 +11,5 @@ Route::prefix('s3bucket')->group(function () {
     Route::delete('/folder/delete-folder', [S3BucketBackblazeController::class, 'deleteFolder']);
     Route::get('/folder/list-folders', [S3BucketBackblazeController::class, 'listFolders']);
 });
+require __DIR__.'/courses.php';
+
