@@ -14,46 +14,72 @@ class CourseController extends Controller
     }
 
     public function addCourses(Request $request) {
-        // Validasi data input
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'content_course' => 'required|file|mimes:pdf|max:10240',  // Validasi bahwa file harus berupa PDF dan ukuran maksimal 10MB
-            'is_paid' => 'required|boolean'
-        ]);
-
-        // Mengambil file PDF dari request
-        $file_course = $request->file('content_course');
-
-        // Menyimpan file PDF ke penyimpanan Backblaze
         try {
-            $content_course = Storage::disk('backblaze')->putFile('/files/smarter', $file_course);
-        } catch (\Exception $e) {
-            return response()->json([
-                'message' => 'Gagal mengunggah file ke Backblaze',
-                'error' => $e->getMessage()
-            ], 500);
-        }
 
-        // Membuat record baru di database
-        try {
-            $course = Courses::create([
-                'title' => $request->input('title'),
-                'description' => $request->input('description'),
-                'content_course' => $content_course,  // Lokasi file di Backblaze
-                'is_paid' => $request->input('is_paid'),
+            $request->validate([
+                'title' => 'required|string|max:255',
+                'description' => 'required|string',
+                'content_course' => 'required|file|mimes:pdf', // Changed from 'file' to 'content_course'
+                'is_paid' => 'required|boolean',
             ]);
 
-            return response()->json([
-                'message' => 'Kursus berhasil ditambahkan',
-                'course' => $course
-            ], 201);
+            // Handle file upload to Backblaze
+            $file = $request->file('content_course');
+            $path = Storage::disk('backblaze')->putFile('/files/smarter', $file);
 
-        } catch (\Exception $e) {
-            return response()->json([
-                'message' => 'Gagal menambahkan kursus',
-                'error' => $e->getMessage()
-            ], 500);
+            $fileexist = Storage::disk('backblaze')-> exists('/files/smarter',$file);
+
+            if (!$path) {
+                return response()->json(['message' => 'Failed to upload file'], 500);
+            } else if ($fileexist) {
+                return response()->json(['message' => 'File already exist'], 500);
+            }
+
+            // Create the course with the file path
+            $course = Courses::create([
+                'title' => $request->title,
+                'description' => $request->description,
+                'content_course' => $path, // Store the path to the file
+                'is_paid' => $request->is_paid,
+            ]);
+
+
+            return response()->json($course, 201);
+        } catch (\Throwable $th) {
+            return response()->json(['message' => 'Failed to upload file'], 500);
         }
     }
+
+    public function deleteCourse($id) {
+        $course = Courses::find($id);
+
+        if (!$course) {
+            return response()->json(['message' => 'Course not found'], 404);
+        }
+
+        // Optionally, delete the file from Backblaze if needed
+        $filePath = $course->content_course;
+        if ($filePath) {
+            Storage::disk('backblaze')->delete($filePath);
+        }
+
+        $deleted = $course->delete();
+
+        if ($deleted) {
+            return response()->json(['message' => 'Course deleted successfully'], 200);
+        }
+
+        return response()->json(['message' => 'Failed to delete course'], 500);
+    }
+
+    public function getCourseById ($id) {
+        $course = Courses::find($id);
+
+        if (!$course) {
+            return response()->json(['message' => 'Course not found'], 404);
+        }
+
+        return response()->json($course, 200);
+    }
+
 }
