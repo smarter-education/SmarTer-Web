@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('title');  // Judul pelajaran seperti Matematika, Biologi, dll.
-            $table->text('description');
-            $table->string('content_course');  // Lokasi file video atau dokumen di penyimpanan
-            $table->boolean('is_paid')->default(true);  // Apakah konten berbayar?
+            $table->string('name')->unique();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
-
     }
 
     /**
