@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./bootstrap";
 import "../css/app.css";
 
@@ -6,6 +7,16 @@ import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
+=======
+import './bootstrap';
+import '../css/app.css';
+
+import { createRoot } from 'react-dom/client';
+import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+>>>>>>> 93e4b29 (fix conflict)
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -19,6 +30,10 @@ createInertiaApp({
         root.render(<App {...props} />);
     },
     progress: {
+<<<<<<< HEAD
         color: "#4B5563",
+=======
+        color: '#4B5563',
+>>>>>>> 310a911 (first commit too)
     },
 });
