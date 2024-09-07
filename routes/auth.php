@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\OauthControllers;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -59,7 +60,15 @@ Route::middleware('auth')->group(function () {
                 ->name('logout');
 });
 
+Route::post('/logout', [ProfileController::class, 'destroy'])->name('logout');
+
 Route::get('/auth/redirect', [OauthControllers::class, 'redirectOauth']);
 Route::get('/auth/google/callback', [OauthControllers::class, 'callbackOauth']);
+Route::post('/auth/logoutGoogle', [OauthControllers::class, 'logout'])->middleware('jwt.auth')->name('logoutGoogle');
 
+
+<<<<<<< HEAD
 require __DIR__.'/s3bucket.php';
+=======
+require __DIR__.'/s3Bucket.php';
+>>>>>>> 310a911 (first commit too)

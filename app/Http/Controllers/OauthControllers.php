@@ -6,10 +6,11 @@ use App\Models\User;
 use App\Models\UserGoogle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Str;
-
+use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class OauthControllers extends Controller
 {
@@ -30,13 +31,30 @@ class OauthControllers extends Controller
                 'google_token' => $googleUser->token,
                 'google_refresh_token' => $googleUser->refreshToken,
             ]);
-            Auth::login($user);
-            return redirect('/dashboard');
+        } else {
+            $user = $registeredUser;
         }
 
-        Auth::login($registeredUser);
+        $token = JWTAuth::fromUser($user);
 
-        return redirect('/dashboard');
+        // Redirect ke frontend dengan token sebagai parameter
+        return redirect()->to('/dashboard?token=' . $token);
+    }
+
+    public function logout()
+    {
+        try {
+            // Invalidasi token JWT
+            JWTAuth::invalidate(JWTAuth::getToken());
+
+            // Hapus token dari cookie
+            Cookie::queue(Cookie::forget('token'));
+
+            // Redirect ke halaman utama
+            return redirect('/')->with('message', 'Berhasil logout');
+        } catch (\Exception $e) {
+            return redirect('/')->with('error', 'Gagal logout');
+        }
     }
 
 }

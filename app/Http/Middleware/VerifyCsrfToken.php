@@ -12,7 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        "/upload-file"
+        '/folder/*',
+        '/courses/*',
+        '/s3bucket/*',
+        '/folder/create-folder'// Exclude all API routes from CSRF protection
     ];
 
     /**
