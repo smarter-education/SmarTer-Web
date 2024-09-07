@@ -13,9 +13,14 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/folder/*',
+<<<<<<< HEAD
         '/courses/*',
         '/s3bucket/*',
         '/folder/create-folder' // Exclude all API routes from CSRF protection
+=======
+        '/s3bucket/*',
+        '/folder/create-folder'// Exclude all API routes from CSRF protection
+>>>>>>> e653c77 (adjust router s3bucket and crsf too)
     ];
 
     /**
