@@ -8,6 +8,7 @@ import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
+<<<<<<< HEAD
 =======
 import './bootstrap';
 import '../css/app.css';
@@ -26,6 +27,8 @@ const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 =======
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 >>>>>>> a8318e9 (fix conflict)
+=======
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

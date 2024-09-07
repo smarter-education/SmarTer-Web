@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('courses')->group(function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703
     Route::post('/add-courses', [CourseController::class, 'addCourses']);
     Route::get('/get-courses', [CourseController::class, 'getAllCourses']);
     Route::get('/get-courses/{id}', [CourseController::class, 'getCourseById']);
@@ -13,6 +16,7 @@ Route::prefix('courses')->group(function () {
     Route::delete('/delete-courses/{id}', [CourseController::class, 'deleteCourse']);
 });
 
+<<<<<<< HEAD
 =======
     Route::get('/get-courses', [CourseController::class, 'getAllCourses']);
 =======
@@ -28,3 +32,5 @@ Route::prefix('courses')->group(function () {
 =======
 
 >>>>>>> ab30e8c (add controller for get all, add, getbyId and delete Course and add router for that controller)
+=======
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703

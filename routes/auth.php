@@ -66,6 +66,7 @@ Route::get('/auth/redirect', [OauthControllers::class, 'redirectOauth']);
 Route::get('/auth/google/callback', [OauthControllers::class, 'callbackOauth']);
 Route::post('/auth/logoutGoogle', [OauthControllers::class, 'logout'])->middleware('jwt.auth')->name('logoutGoogle');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a8318e9 (fix conflict)
@@ -75,6 +76,11 @@ Route::post('/auth/logoutGoogle', [OauthControllers::class, 'logout'])->middlewa
 =======
 >>>>>>> 93e4b29 (fix conflict)
 <<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703
 require __DIR__.'/s3bucket.php';
 =======
 require __DIR__.'/s3Bucket.php';

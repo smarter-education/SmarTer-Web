@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->string('content_course');  // Lokasi file video atau dokumen di penyimpanan
 =======
             $table->string('category');  // Contoh: SMA, Matematika, dll.
@@ -26,6 +27,9 @@ return new class extends Migration
 =======
             $table->string('content_course');  // Lokasi file video atau dokumen di penyimpanan
 >>>>>>> 1004fa4 (adjust schema database and model for courses and add category model and schema (if needed))
+=======
+            $table->string('content_course');  // Lokasi file video atau dokumen di penyimpanan
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703
             $table->boolean('is_paid')->default(true);  // Apakah konten berbayar?
             $table->timestamps();
         });

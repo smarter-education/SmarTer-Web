@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/auth/register/InputLabel";
+=======
+import Checkbox from '@/Components/Checkbox';
+import React, { useEffect, useState } from "react";
+
+import GuestLayout from '@/Layouts/GuestLayout';
+import InputError from '@/Components/InputError';
+import InputLabel from '@/Components/InputLabel';
+import PrimaryButton from '@/Components/PrimaryButton';
+import TextInput from '@/Components/TextInput';
+import { Head, Link, useForm } from '@inertiajs/react';
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703
 
 import TextInput from "@/Components/auth/register/TextInput";
 import { Head, Link, useForm, router } from "@inertiajs/react";
@@ -24,6 +36,7 @@ export default function Login() {
             onFinish: () => reset("password", "password_confirmation"),
         });
     };
+<<<<<<< HEAD
 
     const handleAnimation = (e) => {
         e.preventDefault();
@@ -77,6 +90,33 @@ export default function Login() {
                 targets: ".player ",
                 left: 128,
             });
+=======
+    const GoogleSubmit = async () => {
+        window.location.href = '/auth/redirect';
+    }
+    const checkCallback = async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        if (code) {
+            try {
+                const response = await axios.get(`/auth/google/callback?code=${code}`);
+                if (response.data.token) {
+                    // Simpan token ke localStorage
+                    Cookies.set("token", response.data.token);
+                    // Atur token di header default axios
+                    axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+                    // Redirect ke dashboard atau halaman lain
+                    window.location.href = '/dashboard';
+                }
+            } catch (error) {
+                console.error('Error during Google OAuth callback:', error);
+            }
+        }
+    };
+    useEffect(() => {
+        checkCallback();
+>>>>>>> 7b3a13666800d3234fe494b4533d51fcbbf39703
     }, []);
 
     return (
