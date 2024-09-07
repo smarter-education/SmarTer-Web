@@ -8,12 +8,14 @@ use Illuminate\Support\Facades\Storage;
 
 class CourseController extends Controller
 {
-    public function getAllCourses(Request $request) {
+    public function getAllCourses(Request $request)
+    {
         $courses = Courses::all();
         return response()->json($courses, 200);
     }
 
-    public function addCourses(Request $request) {
+    public function addCourses(Request $request)
+    {
         try {
 
             $request->validate([
@@ -27,7 +29,7 @@ class CourseController extends Controller
             $file = $request->file('content_course');
             $path = Storage::disk('backblaze')->putFile('/files/smarter', $file);
 
-            $fileexist = Storage::disk('backblaze')-> exists('/files/smarter',$file);
+            $fileexist = Storage::disk('backblaze')->exists('/files/smarter', $file);
 
             if (!$path) {
                 return response()->json(['message' => 'Failed to upload file'], 500);
@@ -50,7 +52,8 @@ class CourseController extends Controller
         }
     }
 
-    public function updateCourses(Request $request, $id) {
+    public function updateCourses(Request $request, $id)
+    {
         try {
             // Validasi input
             $request->validate([
@@ -102,7 +105,8 @@ class CourseController extends Controller
     }
 
 
-    public function deleteCourse($id) {
+    public function deleteCourse($id)
+    {
         $course = Courses::find($id);
 
         if (!$course) {
@@ -124,7 +128,8 @@ class CourseController extends Controller
         return response()->json(['message' => 'Failed to delete course'], 500);
     }
 
-    public function getCourseById ($id) {
+    public function getCourseById($id)
+    {
         $course = Courses::find($id);
 
         if (!$course) {
@@ -133,5 +138,4 @@ class CourseController extends Controller
 
         return response()->json($course, 200);
     }
-
 }
