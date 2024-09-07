@@ -1,4 +1,6 @@
 import Checkbox from '@/Components/Checkbox';
+import React, { useEffect, useState } from "react";
+
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
@@ -22,8 +24,30 @@ export default function Login({ status, canResetPassword }) {
     };
     const GoogleSubmit = async () => {
         window.location.href = '/auth/redirect';
-
     }
+    const checkCallback = async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        if (code) {
+            try {
+                const response = await axios.get(`/auth/google/callback?code=${code}`);
+                if (response.data.token) {
+                    // Simpan token ke localStorage
+                    Cookies.set("token", response.data.token);
+                    // Atur token di header default axios
+                    axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+                    // Redirect ke dashboard atau halaman lain
+                    window.location.href = '/dashboard';
+                }
+            } catch (error) {
+                console.error('Error during Google OAuth callback:', error);
+            }
+        }
+    };
+    useEffect(() => {
+        checkCallback();
+    }, []);
 
     return (
         <GuestLayout>
