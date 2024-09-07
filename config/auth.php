@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
+        'guard' => 'google',
+        'passwords' => 'users-google',
     ],
 
     /*
@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'google' => [
+            'driver' => 'jwt',
+            'provider' => 'users-google',
+        ]
     ],
 
     /*
