@@ -5,10 +5,14 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "8a99cfcaa56f4ef4f9b26e64dbaf3e67",
 =======
     "content-hash": "df02e719917b2d74802a0fec25c3acae",
 >>>>>>> a8318e9 (fix conflict)
+=======
+    "content-hash": "8a99cfcaa56f4ef4f9b26e64dbaf3e67",
+>>>>>>> 382b90a (add xendit in laravel composer)
     "packages": [
         {
             "name": "aws/aws-crt-php",
