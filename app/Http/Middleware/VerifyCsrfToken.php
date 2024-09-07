@@ -15,7 +15,7 @@ class VerifyCsrfToken extends Middleware
         '/folder/*',
         '/courses/*',
         '/s3bucket/*',
-        '/folder/create-folder'// Exclude all API routes from CSRF protection
+        '/folder/create-folder' // Exclude all API routes from CSRF protection
     ];
 
     /**
