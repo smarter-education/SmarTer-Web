@@ -12,8 +12,13 @@ Route::prefix('s3bucket')->group(function () {
     Route::delete('/folder/delete-folder', [S3BucketBackblazeController::class, 'deleteFolder']);
     Route::get('/folder/list-folders', [S3BucketBackblazeController::class, 'listFolders']);
 });
+<<<<<<< HEAD
 require __DIR__ . '/courses.php';
 
 
 Route::delete('/folder/delete-folder', [S3BucketBackblazeController::class, 'deleteFolder']);
 Route::get('/folder/list-folders', [S3BucketBackblazeController::class, 'listFolders']);
+=======
+require __DIR__.'/courses.php';
+
+>>>>>>> e66ad5a (add router for courses and adjust in schema table payments and course controllers)
