@@ -1,11 +1,11 @@
-import "./bootstrap";
-import "../css/app.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { createRoot } from "react-dom/client";
-import { createInertiaApp } from "@inertiajs/react";
-import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
+import './bootstrap';
+import '../css/app.css';
 
-const appName = import.meta.env.VITE_APP_NAME;
+import { createRoot } from 'react-dom/client';
+import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -19,6 +19,10 @@ createInertiaApp({
         root.render(<App {...props} />);
     },
     progress: {
+<<<<<<< HEAD
         color: "#4B5563",
+=======
+        color: '#4B5563',
+>>>>>>> 310a911 (first commit too)
     },
 });
