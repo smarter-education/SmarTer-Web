@@ -6,13 +6,7 @@ import Header from "@/Layouts/Header";
 import Footer from "@/Layouts/Footer";
 
 // Image
-import Raihan from "../assets/image/team/raihan.png";
-import Guntur from "../assets/image/team/guntur.png";
-import Rayina from "../assets/image/team/rayina.png";
-import Oatse from "../assets/image/team/oatse.png";
-import Nabil from "../assets/image/team/nabil.png";
-import Thoriq from "../assets/image/team/thoriq.png";
-
+import { raihan, rayina, guntur, oatse, nabil, thoriq } from "@/Helper/Images";
 const Company = (props) => {
     return (
         <>
@@ -151,7 +145,7 @@ const Company = (props) => {
                             <div className="flex flex-col justify-center items-center">
                                 <img
                                     className="h-[250px]"
-                                    src={Raihan}
+                                    src={raihan}
                                     alt=""
                                 />
                                 <p className="text-black font-semibold">
@@ -164,7 +158,7 @@ const Company = (props) => {
                             <div className=" flex flex-col justify-center items-center">
                                 <img
                                     className="h-[250px]"
-                                    src={Guntur}
+                                    src={guntur}
                                     alt=""
                                 />
                                 <p className="text-black font-semibold">
@@ -179,7 +173,7 @@ const Company = (props) => {
                             <div className=" flex flex-col justify-center items-center">
                                 <img
                                     className="h-[250px]"
-                                    src={Rayina}
+                                    src={rayina}
                                     alt=""
                                 />
                                 <p className="text-black font-semibold">
@@ -190,7 +184,7 @@ const Company = (props) => {
                                 </p>
                             </div>
                             <div className=" flex flex-col justify-center items-center">
-                                <img className="h-[250px]" src={Oatse} alt="" />
+                                <img className="h-[250px]" src={oatse} alt="" />
                                 <p className="text-black font-semibold">
                                     Oatse Rizqy Hendarto
                                 </p>
@@ -199,7 +193,7 @@ const Company = (props) => {
                                 </p>
                             </div>
                             <div className=" flex flex-col justify-center items-center">
-                                <img className="h-[250px]" src={Nabil} alt="" />
+                                <img className="h-[250px]" src={nabil} alt="" />
                                 <p className="text-black font-semibold">
                                     Nabil Al Faros
                                 </p>
@@ -210,7 +204,7 @@ const Company = (props) => {
                             <div className=" flex flex-col justify-center items-center">
                                 <img
                                     className="h-[250px]"
-                                    src={Thoriq}
+                                    src={thoriq}
                                     alt=""
                                 />
                                 <p className="text-black font-semibold">

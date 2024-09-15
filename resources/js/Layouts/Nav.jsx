@@ -53,7 +53,7 @@ const Nav = () => {
                     </a>
                 </div>
 
-                {/ Log in Button */}
+                {/* {/ Log in Button /} */}
                 <div>
                     <button className=" mx-6 py-1 w-40 text-sm font-semibold text-purple-700 bg-white border border-purple-700 rounded-full hover:bg-purple-100">
                         Log in

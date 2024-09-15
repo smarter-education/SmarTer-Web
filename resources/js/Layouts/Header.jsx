@@ -1,6 +1,5 @@
 import React from "react";
-import lamp from "../assets/image/others/lamp.png";
-
+import { lamp } from "@/Helper/Images";
 const Header = () => {
     return (
         <header className="relative">

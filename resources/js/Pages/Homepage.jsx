@@ -1,27 +1,33 @@
 import { Link, Head } from "@inertiajs/react";
+import { Carousel } from "flowbite-react";
+// page
 import Dotline from "@/Components/Dotline";
 import Homesvg from "@/Components/Homesvg";
-import bg1 from "../assets/image/background/bg-1.png";
-import bg2 from "../assets/image/background/bg-2.png";
-import hero from "../assets/image/background/hero.png";
-import course from "../assets/image/courses/course.png";
-import course2 from "../assets/image/courses/course-2.png";
 import Header from "@/Layouts/Header";
 import Footer from "@/Layouts/Footer";
-import vt from "../assets/image/background/vt.png";
-import vb from "../assets/image/background/vb.png";
-import circle2 from "../assets/image/background/circle-2.png";
-import circle from "../assets/image/background/circle.png";
-import circlebot from "../assets/image/background/circle-bot.png";
-import { Carousel } from "flowbite-react";
-import banner1 from "../assets/image/banner/banner1.png";
-import banner2 from "../assets/image/banner/banner2.png";
-import banner3 from "../assets/image/banner/banner3.png";
-import lamp from "../assets/image/others/lamp.png";
+// Images
+import {
+    bg1,
+    bg2,
+    hero,
+    course2,
+    course1,
+    vt,
+    vb,
+    circle,
+    circle2,
+    circlebot,
+    banner1,
+    banner2,
+    banner3,
+    lamp,
+} from "@/Helper/Images";
 import Paket from "@/Components/Paket";
-const Homepage = () => {
+
+const Homepage = (props) => {
     return (
         <>
+            <Head title={props.title} />
             {/* ===== Hero Section ===== */}
             <section className="bg-[#FBF3FF] h-screen relative">
                 <nav className="bg-transparent">
@@ -166,7 +172,7 @@ const Homepage = () => {
                     <div className="flex flex-wrap justify-evenly p-10">
                         <div className="rounded-lg bg-smarter1 w-[190px] h-[240px] border-2 border-slate mb-4">
                             <figure>
-                                <img src={course} />
+                                <img src={course1} />
                             </figure>
                             <div className="p-2">
                                 <h2 className="text-center text-black font-semibold text-xl">
@@ -186,7 +192,7 @@ const Homepage = () => {
                         </div>
                         <div className="rounded-lg bg-smarter1 w-[190px] h-[240px] border-2 border-slate">
                             <figure>
-                                <img src={course} />
+                                <img src={course1} />
                             </figure>
                             <div className="p-2">
                                 <h2 className="text-center text-black font-semibold text-xl">
@@ -196,7 +202,7 @@ const Homepage = () => {
                         </div>
                         <div className="rounded-lg bg-smarter1 w-[190px] h-[240px] border-2 border-slate">
                             <figure>
-                                <img src={course} />
+                                <img src={course1} />
                             </figure>
                             <div className="p-2">
                                 <h2 className="text-center text-black font-semibold text-xl">
@@ -206,7 +212,7 @@ const Homepage = () => {
                         </div>
                         <div className="rounded-lg bg-smarter1 w-[190px] h-[240px] border-2 border-slate">
                             <figure>
-                                <img src={course} />
+                                <img src={course1} />
                             </figure>
                             <div className="p-2">
                                 <h2 className="text-center text-black font-semibold text-xl">

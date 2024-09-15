@@ -49,9 +49,19 @@ Route::get('/company', function () {
         'title' => 'Company Page'
     ]);
 });
-Route::get('/dash', function () {
-    return Inertia::render('Dash', [
+Route::get('/userdashboard', function () {
+    return Inertia::render('User/HomeDash', [
         'title' => 'Dashboard'
+    ]);
+});
+Route::get('/userkelas', function () {
+    return Inertia::render('User/HomeKelas', [
+        'title' => 'Kelas Saya'
+    ]);
+});
+Route::get('/admin', function () {
+    return Inertia::render('Admin/AdminDash', [
+        'title' => 'Admin Dashboard'
     ]);
 });
 

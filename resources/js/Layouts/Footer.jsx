@@ -4,8 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import Sponsor from "../assets/image/others/sponsor.png";
-
+import { sponsor } from "@/Helper/Images";
 const Footer = () => {
     return (
         <footer className="bg-gradient-to-r from-smarter7 to-smarter4 h-full ">
@@ -89,7 +88,7 @@ const Footer = () => {
             </div>
             <div className="border-t border-gray-300 my-4 mt-[-10px]"></div>
             <div className="flex justify-end">
-                <img src={Sponsor} alt="" className="w-80 pb-2 pr-10" />
+                <img src={sponsor} alt="" className="w-80 pb-2 pr-10" />
             </div>
         </footer>
     );
