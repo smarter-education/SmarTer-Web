@@ -49,22 +49,37 @@ Route::get('/company', function () {
         'title' => 'Company Page'
     ]);
 });
-Route::get('/userdashboard', function () {
-    return Inertia::render('User/HomeDash', [
+
+// *====== Dashboard ======
+Route::get('/siswadash', function () {
+    return Inertia::render('Dashboard/Siswa/Dashboard', [
         'title' => 'Dashboard'
     ]);
 });
-Route::get('/userkelas', function () {
-    return Inertia::render('User/HomeKelas', [
+Route::get('/siswakelas', function () {
+    return Inertia::render('Dashboard/Siswa/Kelas', [
         'title' => 'Kelas Saya'
     ]);
 });
 Route::get('/admin', function () {
-    return Inertia::render('Admin/AdminDash', [
+    return Inertia::render('Dashboard/Admin/Product', [
+        'title' => 'Admin Dashboard'
+    ]);
+    
+});
+
+// *====== Pembayaraan ======
+Route::get('/pemkos', function () {
+    return Inertia::render('Pembayaran/Pembayarankosong', [
         'title' => 'Admin Dashboard'
     ]);
 });
-
+Route::get('/pemitem', function () {
+    return Inertia::render('Pembayaran/Pembayaranitem', [
+        'title' => 'Admin Dashboard'
+    ]);
+});
+    
 
 
 // ===============================================================================================================

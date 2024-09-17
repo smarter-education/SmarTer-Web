@@ -5,7 +5,7 @@ import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import Navdash from "@/Layouts/Dashboard/Navdash";
 import { pp } from "@/Helper/Images";
 
-const HomeKelas = (props) => {
+const Kelas = (props) => {
     return (
         <>
             <Head title={props.title} />
@@ -234,4 +234,4 @@ const HomeKelas = (props) => {
     );
 };
 
-export default HomeKelas;
+export default Kelas;

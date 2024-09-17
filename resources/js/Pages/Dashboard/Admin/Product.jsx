@@ -5,7 +5,7 @@ import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import { IoStorefrontOutline } from "react-icons/io5";
 import Navdash from "@/Layouts/Dashboard/Navdash";
 import { pp } from "@/Helper/Images";
-const AdminDash = () => {
+const Product = () => {
     return (
         <>
             <nav>
@@ -222,4 +222,4 @@ const AdminDash = () => {
     );
 };
 
-export default AdminDash;
+export default Product;

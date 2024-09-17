@@ -22,6 +22,7 @@ export const dashlogo = "/assets/image/others/dashlogo.png"
 export const lamp = "/assets/image/others/lamp.png"
 export const pp = "/assets/image/others/pp.png"
 export const sponsor = "/assets/image/others/sponsor.png"
+export const smarterlogo = "/assets/image/others/smarterlogo.png"
 
 // Team
 export const raihan = "/assets/image/team/raihan.png"
@@ -30,3 +31,5 @@ export const nabil = "/assets/image/team/nabil.png"
 export const oatse = "/assets/image/team/oatse.png"
 export const rayina = "/assets/image/team/rayina.png"
 export const thoriq = "/assets/image/team/thoriq.png"
+
+export const pembayaran1 = "/assets/image/pembayaaran/pembayaran1.png"

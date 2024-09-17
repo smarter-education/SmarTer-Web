@@ -2,7 +2,7 @@ import Navdash from "@/Layouts/Dashboard/Navdash";
 import Sidebar from "@/Layouts/Dashboard/Sidebar";
 import React from "react";
 
-const HomeDash = () => {
+const Dashboard = () => {
     return (
         <>
             <nav>
@@ -15,7 +15,7 @@ const HomeDash = () => {
                 <main className="bg-[#e6e5e5] w-screen h-screen overflow-hidden">
                     <div className="p-[17px]">
                         <div className="flex gap-5">
-                            <div className="w-[550px] bg-smarter1 border-2 border-solid border-gray-300 p-3 rounded-lg">
+                            <div className="w-[550px] bg-smarter1 border-2 border-solid border-gray-300 p-3 rounded-lg ">
                                 <h6 className="text-black font-bold mb-1">
                                     Kelas Saya
                                 </h6>
@@ -255,4 +255,4 @@ const HomeDash = () => {
     );
 };
 
-export default HomeDash;
+export default Dashboard;
