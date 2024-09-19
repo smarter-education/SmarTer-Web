@@ -14,8 +14,9 @@ export const banner2 = "/assets/image/banner/banner2.png"
 export const banner3 = "/assets/image/banner/banner3.png"
 
 // Courses
-export const course2 = "/assets/image/courses/course-2.png"
 export const course1 = "/assets/image/courses/course.png"
+export const course2 = "/assets/image/courses/course-2.png"
+export const course3 = "/assets/image/courses/course3.png"
 
 // Ohters
 export const dashlogo = "/assets/image/others/dashlogo.png"

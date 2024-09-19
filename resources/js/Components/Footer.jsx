@@ -1,5 +1,5 @@
 import React from "react";
-import {  smarterlogo, sponsor } from "@/Helper/Images";
+import { smarterlogo, sponsor } from "@/Helper/Images";
 import { FaFacebookSquare, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 const Footer = () => {

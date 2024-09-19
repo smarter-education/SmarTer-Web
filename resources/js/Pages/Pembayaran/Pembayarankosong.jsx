@@ -1,14 +1,15 @@
 import React from "react";
 import { pembayaran1 } from "@/Helper/Images";
 import Footer from "@/Components/Footer";
-import Nav from "@/Layouts/Nav";
+import Navdash from "@/Layouts/Dashboard/Navdash";
 
 const Pembayarankosong = () => {
     return (
         <>
+            <Navdash />
             <section>
-                <main className=" bg-white h-screen ">
-                    <div className="p-20">
+                <main className=" bg-white h-screen pt-10  ">
+                    <div className="ml-20">
                         <h4 className="text-2xl font-semibold text-black">
                             Keranjang Belanja
                         </h4>
@@ -25,7 +26,7 @@ const Pembayarankosong = () => {
                                 Keranjang kamu kosong. Yuk, jelajahi SmarTer dan
                                 temukan kebutuhanmu!
                             </p>
-                            <div className="w-[130px] h-11 bg-smarter7 rounded-lg flex justify-center items-center text-[12px] text-white font-bold">
+                            <div className="w-[130px] h-11 bg-smarter7 rounded-lg flex justify-center items-center text-[14px] text-white font-bold">
                                 Jelajahi Smarter
                             </div>
                         </div>
