@@ -70,12 +70,12 @@ Route::get('/admin', function () {
 // *====== Pembayaraan ======
 Route::get('/pemkos', function () {
     return Inertia::render('Pembayaran/Pembayarankosong', [
-        'title' => 'Admin Dashboard'
+        'title' => 'Pembayaran Kosong'
     ]);
 });
 Route::get('/pemitem', function () {
     return Inertia::render('Pembayaran/Pembayaranitem', [
-        'title' => 'Admin Dashboard'
+        'title' => 'Pembayaran Items'
     ]);
 });
 
@@ -84,6 +84,13 @@ Route::get('/pemitem', function () {
 Route::get('/product', function () {
     return Inertia::render('Product/Main', [
         'title' => 'Admin Dashboard'
+    ]);
+});
+
+
+Route::get('/pilihpem', function () {
+    return Inertia::render('Pembayaran/PilihPembayaran', [
+        'title' => 'Pilih Pembayaran'
     ]);
 });
 
