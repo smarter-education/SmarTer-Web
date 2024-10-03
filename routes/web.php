@@ -65,7 +65,6 @@ Route::get('/admin', function () {
     return Inertia::render('Dashboard/Admin/Product', [
         'title' => 'Admin Dashboard'
     ]);
-
 });
 
 // *====== Pembayaraan ======
@@ -79,6 +78,16 @@ Route::get('/pemitem', function () {
         'title' => 'Pembayaran Items'
     ]);
 });
+
+// Product Page
+
+Route::get('/product', function () {
+    return Inertia::render('Product/Main', [
+        'title' => 'Admin Dashboard'
+    ]);
+});
+
+
 Route::get('/pilihpem', function () {
     return Inertia::render('Pembayaran/PilihPembayaran', [
         'title' => 'Pilih Pembayaran'
