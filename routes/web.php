@@ -65,7 +65,6 @@ Route::get('/admin', function () {
     return Inertia::render('Dashboard/Admin/Product', [
         'title' => 'Admin Dashboard'
     ]);
-    
 });
 
 // *====== Pembayaraan ======
@@ -79,7 +78,15 @@ Route::get('/pemitem', function () {
         'title' => 'Admin Dashboard'
     ]);
 });
-    
+
+// Product Page
+
+Route::get('/product', function () {
+    return Inertia::render('Product/Main', [
+        'title' => 'Admin Dashboard'
+    ]);
+});
+
 
 
 // ===============================================================================================================
