@@ -34,3 +34,14 @@ export const rayina = "/assets/image/team/rayina.png"
 export const thoriq = "/assets/image/team/thoriq.png"
 
 export const pembayaran1 = "/assets/image/pembayaaran/pembayaran1.png"
+
+// * ICons
+export const biologi = "/assets/icons/biologi.png"
+export const ekonomi = "/assets/icons/ekonomi.png"
+export const geografi = "/assets/icons/Geography.png"
+export const kimia = "/assets/icons//kimia.png"
+export const matematika = "/assets/icons/Math.png"
+export const fisika = "/assets/icons/Physics.png"
+export const sejarah = "/assets/icons/sejarah.png"
+export const sosiologi = "/assets/icons/sosiologi.png"
+export const time = "/assets/icons/Time.png"

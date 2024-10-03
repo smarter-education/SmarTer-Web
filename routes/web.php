@@ -85,6 +85,13 @@ Route::get('/pilihpem', function () {
     ]);
 });
 
+// *====== Layanan ======
+Route::get('/layanan', function () {
+    return Inertia::render('Layanan/bundle', [
+        'title' => 'Layanan Pembelajaran Online'
+    ]);
+});
+
 
 
 // ===============================================================================================================

@@ -542,46 +542,6 @@ const Pembayaranitem = () => {
                 </main>
                 <Footer />
             </section>
-            {/* <section className="bg-white h-screen">
-                <div className="w-[400px]  rounded-lg border-2 px-4 py-4 text-black font-bold">
-                    <div>
-                        <h6 className="text-lg">Ringkasan Belanja</h6>
-                        <div className="border-b-2 mt-1 mb-2"></div>
-                    </div>
-                    <div>
-                        <div className="flex justify-between">
-                            <Accordion collapseAll className="w-[400px] ">
-                                <AccordionPanel className="h-20">
-                                    <AccordionTitle className="font-bold">
-                                        Tagihan
-                                    </AccordionTitle>
-                                    <AccordionContent>
-                                        <div className="flex justify-between mx-2 font-normal">
-                                            <p>Jenis Bilangan</p>
-                                            <p>Rp 25.000</p>
-                                        </div>
-                                    </AccordionContent>
-                                </AccordionPanel>
-                            </Accordion>
-                            <p className="text-[13px]">Rp. 25.0000</p>
-                        </div>
-                        <div className="border-b-2 mt-1 mb-3"></div>
-                    </div>
-                    <div>
-                        <h6>Gunakan Kode Promo</h6>
-                        <div className="border-b-2 mt-1 mb-2"></div>
-                        <div className="flex">
-                            <input
-                                type="text"
-                                className="bg-smarter1 border-slate-300 w-[250px] h-[30px]"
-                            />
-                            <button className="bg-smarter7 py-1 px-2 text-white text-[14px]">
-                                Terapkan
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
         </>
     );
 };
